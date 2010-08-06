@@ -8,13 +8,13 @@
 		</div>
 		<div class="publititle">
 			<h3><%= publication.title %></h3>
-			<p>por: <%=publication.user.email%></p>
+			<p>por: <%= publication.user.name || publication.user.email%></p>
 		</div>
 		<div class="publicomments">
 			<h4>0</h4>
 		</div>
 		<div class="publitype">
-			<%=image_tag "mensaje-type.gif", :alt => "mensaje" %>
+			<%=image_tag get_category_image(publication), :alt => get_category_name(publication) %>
 		</div>
     </a>
   </div>

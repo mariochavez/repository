@@ -42,6 +42,7 @@ class PublicationsController < ApplicationController
   def create
     @publication = Publication.new(params[:publication])
     @publication.user = current_user
+    @publication.category = 1 # TODO: Fix it cuando integremos paperclip
 
     respond_to do |format|
       if @publication.save
