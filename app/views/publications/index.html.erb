@@ -1,27 +1,22 @@
-<h1>Listing publications</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Body</th>
-    <th>User</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h2>Todas las publicaciones</h2>
 
 <% @publications.each do |publication| %>
-  <tr>
-    <td><%= publication.title %></td>
-    <td><%= publication.body %></td>
-    <td><%= publication.user_id %></td>
-    <td><%= link_to 'Show', publication %></td>
-    <td><%= link_to 'Edit', edit_publication_path(publication) %></td>
-    <td><%= link_to 'Destroy', publication, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <div class="publication">
+    <a title="<%= publication.title %>" href="<%=publication_path publication%>">
+		<div class="publidate">
+			<h4><span><%=publication.created_at.day%></span> <%=publication.created_at.strftime('%b').downcase!%></h4>
+		</div>
+		<div class="publititle">
+			<h3><%= publication.title %></h3>
+			<p>por: <%=publication.user.email%></p>
+		</div>
+		<div class="publicomments">
+			<h4>0</h4>
+		</div>
+		<div class="publitype">
+			<%=image_tag "mensaje-type.gif", :alt => "mensaje" %>
+		</div>
+    </a>
+  </div>
+
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Publication', new_publication_path %>

@@ -1,0 +1,19 @@
+<% if user_signed_in? %>
+	<div id="menus">
+		<div id="menu">
+			<ul>
+				<li><a class="selected" title="todo" href="#">Todo</a></li>
+				<li><a title="Mensajes" href="#">Mensajes</a></li>
+				<li><a title="Archivos" href="#">Archivos</a></li>
+			</ul>
+		</div>
+		
+		
+		<div id="create">
+			<ul>
+				<li><%=link_to "Crear publicación", new_publication_path %></li>
+			</ul>
+		</div>
+		
+	</div>
+<% end %>

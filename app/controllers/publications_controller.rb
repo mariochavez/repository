@@ -2,7 +2,7 @@ class PublicationsController < ApplicationController
   # GET /publications
   # GET /publications.xml
   def index
-    @publications = Publication.all
+    @publications = Publication.where(:user_id => current_user)
 
     respond_to do |format|
       format.html # index.html.erb
