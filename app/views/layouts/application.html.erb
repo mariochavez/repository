@@ -9,8 +9,69 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+	<div id="page">
+		
+		<div id="header">
+			
+			<div id="title">
+				<h1>Repositorio</h1>
+			</div>
+			
+			<div id="menus">
+				<div id="menu">
+					<ul>
+						<li><a class="selected" title="todo" href="#">Todo</a></li>
+						<li><a title="Mensajes" href="#">Mensajes</a></li>
+						<li><a title="Archivos" href="#">Archivos</a></li>
+					</ul>
+				</div>
+				
+				<div id="create">
+					<ul>
+						<li><a title="Crear publicaci&oacute;n" href="#">Crear publicaci&oacute;n</a></li>
+					</ul>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<div id="content">
+			<div id="text">
+				<%= yield %>
+			</div>
+			
+			<div id="bar">
+				<%= render :partial => 'shared/userinfo' %>
 
-<%= yield %>
 
+	                <div id="user-published">
+	                    <h3><span>Mis publicaciones</span> <a title="Ver todas mis publicaciones" href="#">Ver todas</a></h3>
+	                    <ul>
+	                        <li><a title="Variables de autos" href="#">Variables de autos</a></li>
+	                        <li><a title="Bienvenidos al repositorio del proyecto" href="#">Bienvenidos al repositorio del proyecto</a></li>
+	                    </ul>
+	                </div><!--end user-published-->
+
+	                <div id="how-to">
+	                    <h3>Instrucciones de uso</h3>
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem dui, imperdiet eget varius sit amet, adipiscing ut lectus. Suspendisse tincidunt, enim ac ornare vulputate, mi est pulvinar felis, sed scelerisque justo neque in urna.</p>
+	                    <p>Nam luctus, nibh non pulvinar pulvinar, ipsum mauris sodales mi, sed aliquet felis dolor in ligula.</p>
+	                </div><!--end how-to-->
+
+	            </div><!--end bar-->
+		</div>
+		
+		<div id="footer">
+			<div id="quote">
+				<p><span>&laquo;Y el workflow?&raquo;</span> &mdash; Usuario N</p>
+			</div>
+			
+			<div id="add-quote">
+				<p><a title="Agrega tu frase" href="#">Agrega tu frase</a></p>
+			</div>
+		</div>
+		
+	</div>
 </body>
 </html>

@@ -1,5 +1,9 @@
 Repositorio::Application.routes.draw do |map|
+  resources :publications
+
   devise_for :users
+  
+  root :to => "publications#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
