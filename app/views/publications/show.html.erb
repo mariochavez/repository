@@ -1,20 +1,21 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Title:</b>
-  <%= @publication.title %>
-</p>
-
-<p>
-  <b>Body:</b>
-  <%= @publication.body %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%= @publication.user_id %>
-</p>
-
-
-<%= link_to 'Edit', edit_publication_path(@publication) %> |
-<%= link_to 'Back', publications_path %>
+<div id="publication">
+	<div class="publidate">
+		<h4><span><%=@publication.created_at.day%></span> <%=@publication.created_at.strftime('%b').downcase!%></h4>
+	</div>
+	<div class="publititle">
+		<h3><%= @publication.title %></h3>
+		<p>por: <%=@publication.user.email%></p>
+	</div>
+	<div class="publitype">
+		<%=image_tag "mensaje-type.gif", :alt => "mensaje" %>
+	</div>
+	<div class="publicontent">
+		<p><%= @publication.body %></p>
+	</div>
+	<div class="publiattach">
+		<ul></ul>
+	</div>
+	<div id="comments">
+		
+	</div>
+</div>

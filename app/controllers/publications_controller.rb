@@ -2,7 +2,7 @@ class PublicationsController < ApplicationController
   # GET /publications
   # GET /publications.xml
   def index
-    @publications = Publication.where(:user_id => current_user)
+    @publications = Publication.order('created_at desc')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -41,6 +41,7 @@ class PublicationsController < ApplicationController
   # POST /publications.xml
   def create
     @publication = Publication.new(params[:publication])
+    @publication.user = current_user
 
     respond_to do |format|
       if @publication.save

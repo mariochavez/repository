@@ -24,6 +24,9 @@
 		
 		<div id="content">
 			<div id="text">
+				<p class="notice"><%= notice %></p>
+				<p class="alert"><%= alert %></p>
+				
 				<%= yield %>
 			</div>
 			
@@ -41,8 +44,7 @@
 
 	                <div id="how-to">
 	                    <h3>Instrucciones de uso</h3>
-	                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem dui, imperdiet eget varius sit amet, adipiscing ut lectus. Suspendisse tincidunt, enim ac ornare vulputate, mi est pulvinar felis, sed scelerisque justo neque in urna.</p>
-	                    <p>Nam luctus, nibh non pulvinar pulvinar, ipsum mauris sodales mi, sed aliquet felis dolor in ligula.</p>
+	                    <%= yield :help %>
 	                </div><!--end how-to-->
 
 	            </div><!--end bar-->
