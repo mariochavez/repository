@@ -3,7 +3,9 @@
 <head>
   <title>Repositorio</title>
   <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
+  <%= stylesheet_link_tag 'main.less', :rel => 'stylesheet/less' %>
+  <%= javascript_include_tag 'jquery-1.4.2.min', 'rails', 'less-1.0.22.min', 'application' %>
+  
   <%= csrf_meta_tag %>
 </head>
 <body>

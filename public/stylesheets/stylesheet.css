@@ -1,0 +1,682 @@
+body {
+	margin: 0;
+	font-family: Calibri, 'Lucida Grande', Arial, Verdana, sans-serif;
+	background-color: #666;
+}
+
+	/*<page />*/
+
+	#page {
+		width: 980px;
+		margin: 10px auto;
+		background-color: #eee;
+	}
+	
+		/*<header />*/
+	
+		#header {
+			width: 980px;
+			height: 140px;
+			background: #5db485 url(../images/header-bg.gif) 0 0 repeat-x;
+		}
+		
+			#title {
+				width: 980px;
+				height: 110px;
+			}
+			
+				#title h1 {
+					margin: 0;
+					padding: 20px 20px 0 20px;
+					font-size: 40pt;
+					font-weight: normal;
+					color: #f7f7f7;
+				}
+				
+			/*<menus />*/	
+				
+			#menus {
+				width: 980px;
+				height: 30px;
+			}
+			
+				#menu {
+					float: left;
+					width: 680px;
+					height: 30px;
+				}
+				
+					#menu ul {
+						margin: 0;
+						padding: 0 0 0 20px;
+					}
+					
+						#menu ul li {
+							float: left;
+							display: inline;
+							margin: 0;
+							padding: 0 1px 0 0;
+							list-style: none;
+							font-size: 11pt;
+							font-weight: normal;
+							letter-spacing: 1pt;
+							text-transform: uppercase;
+						}
+						
+						#menu ul li a {
+							height: 30px;
+							display: block;
+							padding: 6px 10px;
+							text-decoration: none;
+							background: #4f9570 url(../images/menu-bg.gif) 0 0 repeat-x;
+							color: #eee;
+						}
+						
+							#menu ul li a.selected, #menu ul li a:hover, #create ul li a:hover, #create ul li a.selected {
+								background-color: #fff;
+								background-image: none;
+								color: #86c340;
+							}
+
+				
+				#create {
+					float: right;
+					width: 300px;
+					height: 30px;
+					text-align: right;
+				}		
+								
+					#create ul {
+						margin: 0;
+						padding: 0;
+					}
+					
+						#create ul li {
+							float: right;
+							display: inline;
+							margin: 0;
+							padding: 0 20px 0 0;
+							list-style: none;
+							font-size: 11pt;
+							font-weight: normal;
+							letter-spacing: 1pt;
+							text-transform: uppercase;
+						}
+						
+						#create ul li a {
+							height: 30px;
+							display: block;
+							padding: 6px 10px;
+							text-decoration: none;
+							background-color: #ccff99;
+							color: #5db485;
+						}
+		
+		/*<content />*/				
+						
+		#content {
+			width: 980px;
+			overflow: hidden;
+			background: #fff url(../images/content-bg.gif) 0 0 repeat-y;
+		}
+		
+			/*<text />*/
+		
+			#text {
+				float: left;
+				width: 680px;
+				background-color: #fff;
+			}
+			
+				#text h2 {
+					margin: 0;
+					padding: 20px;
+					font-size: 18pt;
+					font-weight: normal;
+					text-transform: uppercase;
+					color: #4f9570;
+				}
+				
+					/*<publication />*/
+				
+					.publication {
+						width: 640px;
+						height: 80px;
+						margin: 0 20px 20px 20px;
+						background-color: #f7f7f7;
+					}
+					
+						.publication a {
+							height: 80px;
+							display: block;
+							text-decoration: none;
+						}
+					
+						.publication a:hover {
+							background-color: #ccff99;
+						}
+						
+					#publication {
+						width: 640px;
+						overflow: hidden;
+						margin: 20px;
+						padding: 0 0 20px 0;
+						background-color: #f7f7f7;
+					}
+					
+						.publidate {
+							float: left;
+							width: 60px;
+							height: 80px;
+						}
+						
+							.publidate h4 {
+								margin: 0;
+								padding: 10px 10px 0 10px;
+								font-size: 14pt;
+								font-weight: normal;
+								text-align: center;
+								color: #86c340;
+							}
+							
+								.publidate h4 span {
+									font-size: 20pt;
+								}
+							
+						.publititle {
+							float: left;
+							width: 500px;
+							height: 80px;						
+						}
+						
+							.publititle h3 {
+								margin: 0;
+								padding: 18px 0 0 0;
+								font-size: 16pt;
+								font-weight: normal;
+								text-transform: uppercase;
+								color: #86c340;
+							}
+							
+							.publititle p {
+								margin: 0;
+								padding: 0;
+								font-size: 10pt;
+								color: #999;
+							}
+						
+						.publicomments {
+							float: left;
+							width: 50px;
+							height: 80px;
+						}
+						
+							.publicomments h4 {
+								margin: 0;
+								padding: 22px 10px 0 0;
+								font-size: 20pt;
+								font-weight: normal;
+								text-align: right;
+								color: #999;
+							}
+							
+						.publitype {
+							float: right;
+							width: 30px;
+							height: 80px;
+						}
+						
+							.publitype img {
+								border: none;
+								margin: 10px 0 0 0;
+							}
+							
+						.publicontent {
+							clear: both;
+							padding: 20px 60px;
+							border-top: 1px solid #eee;
+						}						
+						
+							.publicontent p {
+								margin: 0;
+								padding: 0 0 10px 0;
+								font-size: 10pt;
+								line-height: 13pt;
+								color: #666;
+							}
+						
+						.publiattach {
+							margin: 0;
+							background-color: #eee;
+						}
+						
+							.publiattach ul {
+								margin: 0;
+								padding: 0;
+							}
+							
+								.publiattach ul li {
+									margin: 0;
+									padding: 5px 20px 5px 80px;
+									font-size: 10pt;
+									background: #eee url(../images/attach-bg.gif) 0 50% no-repeat;
+									border-bottom: 1px solid #f7f7f7;
+									color: #666;
+								}
+								
+									.publiattach ul li a {
+										text-decoration: none;
+										color: #5db485;
+									}
+						
+										.publiattach ul li a:hover {
+											color: #304812;
+										}
+										
+					#comments {
+						width: 640px;
+						margin: 20px 20px 0 20px;
+					}
+					
+						.comment {
+							width: 640px;
+							min-height: 100px;
+							overflow: hidden;
+							border-top: 1px solid #eee;
+						}	
+						
+							.commenticon {
+								float: left;
+								width: 90px;
+							}
+							
+								.commenticon img {
+									width: 50px;
+									height: 50px;
+									margin: 20px 10px 0 20px;
+									padding: 5px;
+									background-color: #999;
+								}
+							
+							.commentinfo {
+								float: left;
+								width: 530px;
+								padding: 0 20px 10px 0;
+							}
+							
+								.commentinfo h4 {
+									margin: 0;
+									padding: 20px 0 10px 0;
+									font-size: 10pt;
+									font-weight: normal;
+									color: #ccc;
+								}
+								
+									.commentinfo h4 span {
+										font-weight: bold;
+										color: #666;
+									}
+									
+								.commentinfo p {
+									margin: 0;
+									padding: 0 0 10px 0;
+									font-size: 10pt;
+									line-height: 13pt;
+									color: #666;
+								}
+								
+					#commentsform {
+						width: 640px;
+						margin: 0 20px 20px 20px;
+						overflow: hidden;
+						border-top: 1px solid #eee;
+					}
+					
+						.commentform {
+							float: left;
+							width: 550px;
+							padding: 0 0 10px 0;
+						}
+						
+							.commentform p {
+								margin: 0;
+								padding: 20px 0;
+								font-size: 10pt;
+								font-weight: bold;
+								color: #666;
+							}
+							
+							.commentform form {
+								margin: 0;
+								padding: 0;
+							}
+							
+								.commentform textarea {
+									width: 518px;
+									height: 100px;
+									margin: 0 0 20px 0;
+									padding: 5px;
+									font-family: Calibri, 'Lucida Grande', Arial, Verdana, sans-serif;
+									font-size: 10pt;
+									line-height: 13pt;
+									border: 1px solid #eee;
+									background-color: #f7f7f7;
+									color: #666;
+								}
+								
+								.commentform input {
+									font-family: Calibri, 'Lucida Grande', Arial, Verdana, sans-serif;
+									font-size: 10pt;
+									text-transform: uppercase;
+									letter-spacing: 1pt;
+									margin: 0 0 10px 0;
+								}
+						
+						#theform {
+							width: 640px;
+							margin: 0 20px 20px 20px;
+							background-color: #f7f7f7;
+						}
+						
+							#theform form {
+								margin: 0;
+							}
+							
+								#theform form p {
+									margin: 0;
+									padding: 20px 0;
+									border-top: 1px solid #eee;
+								}
+								
+									p.gray {
+										border-top: 1px solid #fff;
+										background-color: #eee;
+									}
+									
+									p.avataredit {
+										min-height: 30px;
+									}
+									
+										p.avataredit span {
+											float: left;
+											padding: 7px 0 0 0;
+											font-size: 10pt;
+										}
+									
+										p.avataredit a {
+											float: right;
+											padding: 7px 20px 0 0;
+											font-size: 10pt;
+											text-transform: uppercase;
+											text-decoration: none;
+											color: #5db485;
+										}
+
+										p.avataredit a:hover {
+											color: #304812;
+										}
+								
+								#theform label {
+									float: left;
+									width: 80px;
+									padding: 7px 10px 0 0;
+									font-size: 10pt;
+									text-align: right;
+									color: #666;
+								}
+								
+								#theform input.inputbig {
+									width: 400px;
+									border: 1px solid #eee;
+									padding: 5px;
+									font-family: Calibri, 'Lucida Grande', Arial, Verdana, sans-serif;
+									font-size: 10pt;
+									color: #666;
+								}
+								
+								#theform textarea {
+									width: 508px;
+									height: 100px;
+									padding: 5px;
+									font-family: Calibri, 'Lucida Grande', Arial, Verdana, sans-serif;
+									font-size: 10pt;
+									line-height: 13pt;
+									border: 1px solid #eee;
+									color: #666;
+								}
+								
+								#theform input.inputlow {
+									width: 200px;
+									margin: 0;
+									border: 1px solid #eee;
+									padding: 5px;
+									font-family: Calibri, 'Lucida Grande', Arial, Verdana, sans-serif;
+									font-size: 10pt;
+									color: #666;
+								}
+								
+								#theform input.inputnormal {
+									width: 250px;
+									margin: 0;
+									border: 1px solid #eee;
+									padding: 5px;
+									font-family: Calibri, 'Lucida Grande', Arial, Verdana, sans-serif;
+									font-size: 10pt;
+									color: #666;
+								}
+								
+								#theform input.submitsearch {
+									font-family: Calibri, 'Lucida Grande', Arial, Verdana, sans-serif;
+									font-size: 10pt;
+									text-transform: uppercase;
+									letter-spacing: 1pt;
+								}
+								
+								#theform .gray a {
+									display: block;
+									margin: 20px 0 -15px 0;
+									padding: 5px 0 0 90px;
+									font-size: 10pt;
+									text-transform: uppercase;
+									text-decoration: none;
+									border-top: 1px solid #f7f7f7;
+									color: #5db485;
+								}
+
+								#theform .gray a:hover {
+									color: #304812;
+								}
+								
+								
+								
+								#theform input.submitfinal {
+									margin: 0 0 0 90px;
+									font-family: Calibri, 'Lucida Grande', Arial, Verdana, sans-serif;
+									font-size: 10pt;
+									text-transform: uppercase;
+									letter-spacing: 1pt;
+								}
+								
+								
+							
+						#pagination {
+							margin: 0 20px 40px 20px;
+						}
+						
+						#pagination p {
+							margin: 0;
+							font-size: 10pt;
+							text-align: right;
+							color: #ccc;
+						}					
+			
+			/*<bar />*/
+			
+			#bar {
+				float: left;
+				width: 300px;
+				min-height: 500px;
+				background: #eee url(../images/bar-bg.gif) 0 0 no-repeat;
+			}
+			
+				#user-options {
+					width: 260px;
+					height: 60px;
+					margin: 20px 20px 40px 20px;
+				}
+				
+					#user-options img {
+						float: left;
+						width: 50px;
+						height: 50px;
+						margin: 0 10px 0 0;
+						padding: 5px;
+						background-color: #999;
+					}
+					
+					#user-options h4 {
+						margin: 0;
+						padding: 10px 0 5px 0;
+						font-size: 11pt;
+						font-weight: bold;
+						text-transform: uppercase;
+						color: #666;
+					}
+					
+					#user-options p {
+						margin: 0;
+						font-size: 10pt;
+						text-transform: uppercase;
+						color: #ccc;
+					}
+					
+						#user-options p a {
+							text-decoration: none;
+							color: #5db485;
+						}
+						
+						#user-options p a:hover {
+							color: #304812;
+						}
+				
+				
+				#user-published, #how-to {
+					width: 260px;
+					margin: 0 20px 40px 20px;
+				}
+				
+					#user-published h3 {
+						margin: 0;
+						padding: 0 0 5px 0;
+						font-size: 11pt;
+						font-weight: normal;
+						text-transform: uppercase;
+						text-align: right;
+						color: #666;
+						border-bottom: 1px solid #ccc;
+					}
+					
+						#user-published h3 span {
+							float: left;
+							letter-spacing: 1pt;
+						}
+						
+						#user-published h3 a {
+							font-size: 10pt;
+							text-decoration: none;
+							color: #5db485;
+						}
+						
+						#user-published h3 a:hover {
+							color: #304812;
+						}
+						
+					#user-published ul {
+						margin: 0;
+						padding: 0;
+					}
+					
+						#user-published ul li {
+							margin: 0;
+							padding: 5px 5px 0 5px;
+							font-size: 10pt;
+							list-style: none;
+						}
+						
+							#user-published ul li a {
+								text-decoration: none;
+								color: #5db485;
+							}
+							
+							#user-published ul li a:hover {
+								color: #304812;
+							}
+					
+					#how-to h3 {
+						margin: 0;
+						padding: 0 0 5px 0;
+						font-size: 11pt;
+						font-weight: normal;
+						text-transform: uppercase;
+						letter-spacing: 1pt;
+						color: #666;
+						border-bottom: 1px solid #ccc;
+					}
+					
+					#how-to p {
+						margin: 0;
+						padding: 5px 5px 5px 5px;
+						font-size: 10pt;
+						line-height: 13pt;
+						color: #666;
+					}
+		
+		/*<footer />*/	
+		
+		#footer {
+			width: 980px;
+			height: 70px;
+			background: #222 url(../images/footer-bg.gif) 0 0 no-repeat;
+		}
+		
+			#quote {
+				float: left;
+				width: 680px;
+				height: 70px;
+				margin: 0 0 0 150px;
+			}
+			
+				#quote p {
+					margin: 0;
+					padding: 26px 0 0 0;
+					font-size: 10pt;
+					text-align: center;
+					color: #999;
+				}
+				
+					#quote p span {
+						color: #ccff99;
+					}
+			
+			#add-quote {
+				float: left;
+				width: 150px;
+				height: 70px;
+			}
+			
+				#add-quote p {
+					margin: 0;
+					padding: 26px 20px 0 0;
+					font-size: 10pt;
+					text-align: right;
+					text-transform: uppercase;
+					letter-spacing: 1pt;
+				}
+				
+					#add-quote p a {
+						text-decoration: none;
+						color: #5db485;
+					}					
+
+		
+		
