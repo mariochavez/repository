@@ -1,5 +1,7 @@
 Repositorio::Application.routes.draw do |map|
-  resources :publications
+  resources :publications do
+      resources :comments
+  end
 
   devise_for :users
   

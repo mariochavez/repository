@@ -11,7 +11,7 @@
 			<p>por: <%= publication.user.name || publication.user.email%></p>
 		</div>
 		<div class="publicomments">
-			<h4>0</h4>
+			<h4><%= publication.comments.length %></h4>
 		</div>
 		<div class="publitype">
 			<%=image_tag get_category_image(publication), :alt => get_category_name(publication) %>
