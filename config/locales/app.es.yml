@@ -1,0 +1,14 @@
+es:
+    publish: publicar
+    publication_created: 'Su publicación fue creada.'
+    publications:
+        new:
+            title: Crear publicación
+    activerecord:
+        models:
+            publication: publicación
+            comment: comentario
+        attributes:
+            publication:
+                title: Título
+                body: Contenido

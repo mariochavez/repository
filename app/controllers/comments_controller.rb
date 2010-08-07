@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  before_filter :authenticate_user!
+  
   before_filter do
     @publication = Publication.find params[:publication_id]
   end

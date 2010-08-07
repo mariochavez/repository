@@ -1,4 +1,6 @@
 class PublicationsController < ApplicationController
+  before_filter :authenticate_user!
+  
   # GET /publications
   # GET /publications.xml
   def index
@@ -46,7 +48,7 @@ class PublicationsController < ApplicationController
 
     respond_to do |format|
       if @publication.save
-        format.html { redirect_to(@publication, :notice => 'Publication was successfully created.') }
+        format.html { redirect_to(@publication, :notice => t(:publication_created)) }
         format.xml  { render :xml => @publication, :status => :created, :location => @publication }
       else
         format.html { render :action => "new" }

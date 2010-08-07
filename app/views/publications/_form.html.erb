@@ -13,15 +13,15 @@
 	  <% end %>
 
 	  <p>
-	    <%= f.label 'Título' %>
+	    <%= f.label :title %>
 	    <%= f.text_field :title, :class => 'inputbig' %>
 	  </p>
 	  <p>
-	    <%= f.label 'Contenido' %>
+	    <%= f.label :body %>
 	    <%= f.text_area :body %>
 	  </p>
 	  <p>
-	    <%= f.submit 'Publicar', :class => 'submitfinal' %>
+	    <%= f.submit t(:publish), :class => 'submitfinal' %>
 	  </p>
 	<% end %>
 </div>
