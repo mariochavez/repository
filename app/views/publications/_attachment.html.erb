@@ -1,0 +1,9 @@
+<div class="attachment">
+<%= fields_for "publication[attachment_attributes][]", attachment do |p| %>
+  <p>
+    <%= p.label :attachment %>
+    <%= p.file_field :asset, :index => nil %>
+    <%= link_to_function "delete", "remove_field($(this), ('.attachment'))" %>
+  </p>
+<% end %>
+</div>

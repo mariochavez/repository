@@ -13,7 +13,13 @@
 		<p><%= @publication.body %></p>
 	</div>
 	<div class="publiattach">
-		<ul></ul>
+		<ul>
+		<% @publication.attachments.each do |attachment| %>
+			<li>
+				<%= link_to attachment.asset.original_filename, attachment.asset.url %>
+			</li>
+		<% end %>
+		</ul>
 	</div>
 	<div id="comments">
 		<% @publication.comments.each do |comment| %>

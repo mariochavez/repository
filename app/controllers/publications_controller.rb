@@ -27,7 +27,8 @@ class PublicationsController < ApplicationController
   # GET /publications/new.xml
   def new
     @publication = Publication.new
-
+    1.upto(1) { @publication.attachments.build }
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @publication }
