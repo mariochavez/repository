@@ -21,46 +21,44 @@
 		<% end %>
 		</ul>
 	</div>
-	<div id="comments">
-		<% @publication.comments.each do |comment| %>
-			<div class="comment">
-				<div class="commenticon">
-					<%=image_tag comment.user.avatar.url(:thumb), :alt => 'user-icon' %>
-				</div>
-				<div class="commentinfo">
-					<h4><span><%= comment.user.name || comment.user.email %></span> hace <%=distance_of_time_in_words_to_now comment.created_at %></h4>
-					<p><%=comment.body %></p>
-					<% if user_signed_in? && (current_user == @publication.user || current_user == comment.user) %>
-					<%= button_to "Eliminar", [@publication, comment], :confirm => "Esta seguro de eliminar el comentario?", :method => :delete %>
-					<% end %>
-				</div>
-			</div>
-		<% end %>
-		
-		<div class="commentsform">
+</div>
+	
+<div id="comments">
+	<% @publication.comments.each do |comment| %>
+		<div class="comment">
 			<div class="commenticon">
-				<%=image_tag current_user.avatar.url(:thumb), :alt => 'user-icon' %>
+				<%=image_tag comment.user.avatar.url(:thumb), :alt => 'user-icon' %>
 			</div>
-			
-			<div class="commentform">
-				<p>Deja tu comentario ...</p>
-				<%= form_for [@publication, Comment.new] do |form| %>
-					<% if @publication.errors.any? %>
-					    <div id="error_explanation">
-					      <h2><%= pluralize(@publication.errors.count, "error") %> prohibited this publication from being saved:</h2>
-
-					      <ul>
-					      <% @publication.errors.full_messages.each do |msg| %>
-					        <li><%= msg %></li>
-					      <% end %>
-					      </ul>
-					    </div>
-					<% end %>
-					
-					<%= form.text_area :body %>
-					<%= form.submit 'Publicar', :class => 'submitfinal' %>
+			<div class="commentinfo">
+				<h4><span><%= comment.user.name || comment.user.email %></span> hace <%=distance_of_time_in_words_to_now comment.created_at %></h4>
+				<p><%=comment.body %></p>
+				<% if user_signed_in? && (current_user == @publication.user || current_user == comment.user) %>
+					<%= button_to "Eliminar", [@publication, comment], :confirm => "Esta seguro de eliminar el comentario?", :method => :delete %>
 				<% end %>
 			</div>
 		</div>
+	<% end %>
+</div>		
+		
+<div id="commentsform">
+	<div class="commenticon">
+		<%=image_tag current_user.avatar.url(:thumb), :alt => 'user-icon' %>
+	</div>
+	<div class="commentform">
+		<p>Deja tu comentario ...</p>
+		<%= form_for [@publication, Comment.new] do |form| %>
+			<% if @publication.errors.any? %>
+				<div id="error_explanation">
+					<h2><%= pluralize(@publication.errors.count, "error") %> prohibited this publication from being saved:</h2>
+					<ul>
+					<% @publication.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					<% end %>
+					</ul>
+				</div>
+			<% end %>
+			<%= form.text_area :body %>
+			<%= form.submit 'Publicar', :class => 'submitfinal' %>
+		<% end %>
 	</div>
 </div>
