@@ -1,5 +1,5 @@
 
-<h2>Todas las publicaciones</h2>
+<h2>Mis publicaciones</h2>
 
 <% @publications.each do |publication| %>
   <div class="publication">
@@ -20,8 +20,4 @@
     </a>
   </div>
 
-<% end %>
-
-<% content_for :help do %>
-	<%= render :partial => "shared/userpublished" %>
 <% end %>
