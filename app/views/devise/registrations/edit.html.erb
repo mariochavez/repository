@@ -4,7 +4,7 @@
 	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :multipart => true }) do |f| %>
 	  <%= devise_error_messages! %>
 
-	  <p><%= f.label :name %>
+	  <p><%= f.label 'Nombre' %>
 	  <%= f.text_field :name, :class => 'inputnormal' %></p>
 
 	  <p><%= f.label :email %>
@@ -13,13 +13,13 @@
 	  <p class="gray"><%= f.label :password %>
 	  <%= f.password_field :password, :class => 'inputnormal' %></p>
 
-	  <p class="gray"><%= f.label :password_confirmation %>
+	  <p class="gray"><%= f.label "Confirmar" %>
 	  <%= f.password_field :password_confirmation, :class => 'inputnormal' %></p>
 
 	  <p><%= f.label "Avatar" %>
 	  	<%= f.file_field :avatar, :class => 'inputlow' %></p>
 	
-	  <p><%= f.label :current_password %>
+	  <p><%= f.label "Actual pass" %>
 	  <%= f.password_field :current_password, :class => 'inputnormal' %></p>
 
 	  <p><%= f.submit "Guardar", :class => 'submitfinal' %></p>
@@ -27,9 +27,14 @@
 </div>
 
 <% content_for :help do %>
-	<p>Si no desea modificar su clave, d&eacute;jela en blanco, al igual que la confirmaci&oacute;n.</p>
-	<p>Para modificar su perfil es necesario introducir su clave actual.</p>
+	<div class="how-to">
+		<h3>Intrucciones de uso</h3>
+		<p>Si no desea modificar su clave, d&eacute;jela en blanco, al igual que la confirmaci&oacute;n.</p>
+		<p>Para modificar su perfil es necesario introducir su clave actual.</p>
+	</div>
 	
-	<h3>Cancelar mi cuenta</h3>
-	<p>Unhappy? <%= link_to "Cancelar mi cuenta", registration_path(resource_name), :confirm => "Está seguro?", :method => :delete %>.</p>
+	<div class="how-to">
+		<h3>Cancelar Cuenta</h3>
+		<p>Deseo <%= link_to "cancelar mi cuenta", registration_path(resource_name), :confirm => "Está seguro?", :method => :delete %>.</p>
+	</div>
 <% end %>
