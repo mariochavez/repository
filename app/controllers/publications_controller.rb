@@ -11,6 +11,10 @@ class PublicationsController < ApplicationController
       format.xml  { render :xml => @publications }
     end
   end
+  
+  def mypublications
+    @publications = current_user.publications.order('created_at desc')
+  end
 
   # GET /publications/1
   # GET /publications/1.xml

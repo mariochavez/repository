@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   has_many :publications
   has_many :comments
   
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "50x50>" }
+  has_attached_file :avatar, :styles => { :small => "45x45#", :thumb => "50x50#" }
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable, :lockable and :timeoutable
