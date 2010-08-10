@@ -2,7 +2,7 @@
 	<div id="menus">
 		<div id="menu">
 			<ul>
-				<li><%=link_to "Todo", root_path, :class => 'selected', :title => 'todo'%></li>
+				<li><%=link_to "Todo", root_path, :class => params[:controller] == 'publications' && params[:action] == 'index' ? :selected : '', :title => 'Todo' %></li>
 				<li><a title="Mensajes" href="#">Mensajes</a></li>
 				<li><a title="Archivos" href="#">Archivos</a></li>
 			</ul>
@@ -11,9 +11,21 @@
 		
 		<div id="create">
 			<ul>
-				<li><%=link_to "Crear publicación", new_publication_path %></li>
+				<li><%=link_to "Crear publicación", new_publication_path, :class => params[:controller] == 'publications' && params[:action] == 'new' ? :selected : '', :title => 'Crear publicacion' %></li>
 			</ul>
 		</div>
 		
 	</div>
+
+<% else %>	
+	<div id="menus">
+		<div id="menu">
+			<ul>
+				<li><%=link_to "Entrar", new_session_path(resource_name), :class => params[:controller] == 'devise/sessions' && params[:action] == 'new' ? :selected : '', :title => 'Entrar' %></li>
+				<li><%=link_to "Registrate", new_registration_path(resource_name), :class => params[:controller] == 'devise/registrations' && params[:action] == 'new' ? :selected : '', :title => 'Registrate' %></li>
+			</ul>
+		</div>
+		
+	</div>
+	
 <% end %>
