@@ -9,7 +9,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem 'devise', '1.1.rc2'
 gem 'haml', '3.0.12'
-gem 'rmagick'
+#gem 'rmagick'
 gem 'paperclip', '2.3.3'
 # Use unicorn as the web server
 # gem 'unicorn'
