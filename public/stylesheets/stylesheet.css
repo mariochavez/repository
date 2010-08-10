@@ -398,8 +398,8 @@ body {
 									border-top: 1px solid #eee;
 								}
 								
-									p.gray {
-										border-top: 1px solid #fff;
+									#theform p.gray {
+										border-top: 1px solid #f7f7f7;
 										background-color: #eee;
 									}
 									
