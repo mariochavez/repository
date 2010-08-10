@@ -2,8 +2,7 @@
 <html>
 <head>
   <title>Repositorio</title>
-  <%= stylesheet_link_tag :all %>
-  <%= stylesheet_link_tag 'main.less', :rel => 'stylesheet/less' %>
+  <%= stylesheet_link_tag 'stylesheet' %>
   <%= javascript_include_tag 'jquery-1.4.2.min', 'rails', 'less-1.0.22.min', 'application' %>
   
   <%= csrf_meta_tag %>
@@ -16,6 +15,8 @@
 			<div id="title">
 				<h1>Repositorio</h1>
 			</div>
+			<p class="notice"><%= notice %></p>
+			<p class="alert"><%= alert %></p>
 			
 			<%= render :partial => 'shared/menu' %>
 
@@ -24,24 +25,14 @@
 		
 		<div id="content">
 			<div id="text">
-				<p class="notice"><%= notice %></p>
-				<p class="alert"><%= alert %></p>
-				
 				<%= yield %>
 			</div>
 			
 			<div id="bar">
 				<%= render :partial => 'shared/userinfo' %>
-
 				<%= render :partial => 'shared/userpublished' %>
-
-
-	                <div id="how-to">
-	                    <h3>Instrucciones de uso</h3>
-	                    <%= yield :help %>
-	                </div><!--end how-to-->
-
-	            </div><!--end bar-->
+				<%= yield :help %>
+	        </div><!--end bar-->
 		</div>
 		
 		<div id="footer">

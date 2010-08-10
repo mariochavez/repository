@@ -7,6 +7,7 @@ body {
 	/*<page />*/
 
 	#page {
+		position: relative;
 		width: 980px;
 		margin: 10px auto;
 		background-color: #eee;
@@ -32,6 +33,15 @@ body {
 					font-weight: normal;
 					color: #f7f7f7;
 				}
+				
+			p.notice, p.alert {
+				position: absolute;
+				margin: 0;
+				top: 20px;
+				right: 20px;
+				font-size: 10pt;
+				color: #f7f7f7;
+			}
 				
 			/*<menus />*/	
 				
@@ -678,5 +688,35 @@ body {
 						color: #5db485;
 					}					
 
+					.field_with_errors {
+					  padding: 2px;
+					  background-color: red;
+					  display: table;
+					}
+
+					#error_explanation {
+					  width: 450px;
+					  border: 2px solid red;
+					  padding: 7px;
+					  padding-bottom: 0;
+					  margin-bottom: 20px;
+					  background-color: #f0f0f0;
+					}
+
+					#error_explanation h2 {
+					  text-align: left;
+					  font-weight: bold;
+					  padding: 5px 5px 5px 15px;
+					  font-size: 12px;
+					  margin: -7px;
+					  margin-bottom: 0px;
+					  background-color: #c00;
+					  color: #fff;
+					}
+
+					#error_explanation ul li {
+					  font-size: 12px;
+					  list-style: square;
+					}
 		
 		
