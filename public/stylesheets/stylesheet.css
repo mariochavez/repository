@@ -149,7 +149,7 @@ body {
 				
 					/*<publication />*/
 				
-					.publication {
+					.publication, .mypublication {
 						width: 640px;
 						height: 80px;
 						margin: 0 20px 20px 20px;
@@ -207,6 +207,48 @@ body {
 								text-transform: uppercase;
 								color: #86c340;
 							}
+							
+							.mypublititle h3 {
+								margin: 0;
+								padding: 18px 20px 10px 20px;
+								font-size: 16pt;
+								font-weight: normal;
+								text-transform: lowercase;
+								text-align: right;
+								color: #86c340;
+							}
+							
+								.mypublititle h3 span {
+									float: left;
+									text-transform: uppercase;
+								}
+								
+									.mypublititle h3 span a {
+										text-decoration: none;
+										color: #86c340;
+									}
+							
+							.mypublioptions h5 {
+								height: 16px;
+								margin: 0;
+								padding: 5px 20px;
+								font-size: 10pt;
+								font-weight: normal;
+								text-transform: uppercase;
+								letter-spacing: 1pt;
+								background-color: #ccff99;
+								color: #999;
+							}
+							
+								.mypublioptions h5 a {
+									margin: 0 20px 0 0;
+									text-decoration: none;
+									color: #5db485;
+								}
+
+								.mypublioptions h5 a:hover {
+									color: #304812;
+								}
 							
 							.publititle p {
 								margin: 0;
