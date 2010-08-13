@@ -18,7 +18,7 @@
 		<%= f.label :body %>
 	    <%= f.text_area :body %>
 	</p>
-	<%= render :partial => 'attachment', :collection => @publication.attachments %>
+	<%= render 'attachment', :f => f %>
 	<p>
 		<%= f.submit t(:publish), :class => 'submitfinal' %>
 	</p>

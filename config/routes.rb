@@ -1,12 +1,10 @@
-Repositorio::Application.routes.draw do |map|
+Repositorio::Application.routes.draw do
   resources :publications do
-      resources :comments
-      
+      resources :comments 
   end
   
   match "/mypublications" => "publications#mypublications", :as => :mypublications
-  
-
+  get "/published/:type", :controller => :publications, :action => :index
   
   #La EPIC line con que derrote a Enrique 
   #map.get 'mypublications', :controller => 'publications', :action => 'mypublications'
