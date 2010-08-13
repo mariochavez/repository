@@ -1,0 +1,9 @@
+- if f.object.new_record?
+  %p.gray
+    = f.label 'Archivo'
+    = f.file_field :asset,  :class => 'inputlow' 
+    = remove_child_link 'Eliminar', f
+- else
+  .publiattach
+    = link_to f.object.asset.original_filename, f.object .asset.url
+    = remove_child_link 'Eliminar', f

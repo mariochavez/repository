@@ -1,0 +1,20 @@
+#theform
+  = form_for @publication, :html => { :multipart => true } do |f|
+    - if @publication.errors.any?
+      = render 'shared/errors', :object => @publication
+    
+    %p
+      = f.label       :title
+      = f.text_field  :title, :class => :inputbig
+    %p
+      = f.label     :body
+      = f.text_area :body
+      
+    .attachment
+      - f.fields_for :attachments do |attachment|
+        = render 'attachment', :f => attachment
+     
+      = add_child_link "Nuevo archivo",  :attachments
+      = new_child_fields_template f,    :attachments
+      
+    %p= f.submit t(:publish), :class => :submitfinal

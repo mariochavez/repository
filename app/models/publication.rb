@@ -6,7 +6,7 @@ class Publication < ActiveRecord::Base
   validates_presence_of :title
   validates_presence_of :body
   
-  accepts_nested_attributes_for :attachments, :reject_if => lambda { |attachment| attachment[:asset].blank? }
+  accepts_nested_attributes_for :attachments, :reject_if => lambda { |attachment| attachment[:asset].blank? }, :allow_destroy => true
   
   scope :latest,    order("created_at DESC")
   scope :messages,  where("category = 0")
