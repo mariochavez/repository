@@ -1,10 +1,11 @@
+<% publications_url = params[:controller] == 'publications' && params[:action] == 'index' %>
 <% if user_signed_in? %>
 	<div id="menus">
 		<div id="menu">
 			<ul>
-				<li><%=link_to "Todo", root_path, :class => params[:controller] == 'publications' && params[:action] == 'index' ? :selected : '', :title => 'Todo' %></li>
-				<li><a title="Mensajes" href="#">Mensajes</a></li>
-				<li><a title="Archivos" href="#">Archivos</a></li>
+				<li><%= link_to "Todo", root_path, :class => publications_url && params[:type].blank? ? :selected : '', :title => 'Todo' %></li>
+				<li><%= link_to "Mensajes", "/published/messages",  :class => (params[:type] == 'messages')?  :selected : '', :title => :Mensajes %></li>
+				<li><%= link_to "Archivos", "/published/uploads",   :class => (params[:type] == 'uploads')?   :selected : '', :title => :Archivos %></li>
 			</ul>
 		</div>
 		

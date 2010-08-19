@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
 	<div id="user-options">
 		<%= image_tag current_user.avatar.url(:thumb), :alt => 'user-icon' %>
-	    <h4><%= current_user.name || current_user.email%></h4>
+	    <h4><%= current_user.display_name %></h4>
 	    <p><%=link_to "Editar perfil", edit_user_registration_path, :title => "Editar perfil"%> | <%=link_to "Cerrar sesión", destroy_user_session_path, :title => "Cerrar sesi&oacute;n"%></p>
 	</div><!--end user-options-->
 <% end %>

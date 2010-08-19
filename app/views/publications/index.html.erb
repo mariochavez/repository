@@ -9,7 +9,7 @@
 		</div>
 		<div class="publititle">
 			<h3><%= publication.title %></h3>
-			<p>por: <%= publication.user.name || publication.user.email%></p>
+			<p>por: <%= publication.user.display_name %></p>
 		</div>
 		<div class="publicomments">
 			<h4><%= publication.comments.length %></h4>

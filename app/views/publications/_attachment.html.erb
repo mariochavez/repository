@@ -1,9 +1,0 @@
-<div class="attachment">
-<%= fields_for "publication[attachment_attributes][]", attachment do |p| %>
-  <p class="gray">
-    <%= p.label 'Archivo' %>
-    <%= p.file_field :asset, :index => nil, :class => 'inputlow' %>
-    <%= link_to_function "Eliminar", "remove_field($(this), ('.attachment'))" %>
-  </p>
-<% end %>
-</div>

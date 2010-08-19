@@ -1,0 +1,6 @@
+%h2 Editar mi publicación
+= render 'form'
+- content_for :help do
+  = render :partial => 'shared/userpublished'
+:javascript
+  $(document).ready(function() { $('.add_child').click(); })

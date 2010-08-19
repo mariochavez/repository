@@ -4,7 +4,7 @@
 	</div>
 	<div class="publititle">
 		<h3><%= @publication.title %></h3>
-		<p>por: <%= @publication.user.name || @publication.user.email%></p>
+		<p>por: <%= @publication.user.display_name %></p>
 	</div>
 	<div class="publitype">
 		<%=image_tag get_category_image(@publication), :alt => get_category_name(@publication) %>
@@ -30,7 +30,7 @@
 				<%=image_tag comment.user.avatar.url(:thumb), :alt => 'user-icon' %>
 			</div>
 			<div class="commentinfo">
-				<h4><span><%= comment.user.name || comment.user.email %></span> hace <%=distance_of_time_in_words_to_now comment.created_at %></h4>
+				<h4><span><%= comment.user.display_name %></span> hace <%=distance_of_time_in_words_to_now comment.created_at %></h4>
 				<p><%=comment.body %></p>
 				<% if user_signed_in? && (current_user == @publication.user || current_user == comment.user) %>
 					<%= button_to "Eliminar", [@publication, comment], :confirm => "Esta seguro de eliminar el comentario?", :method => :delete %>
