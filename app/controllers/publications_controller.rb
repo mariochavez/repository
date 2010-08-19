@@ -1,5 +1,6 @@
 class PublicationsController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :my_publications
   
   # GET /publications
   # GET /publications.xml
@@ -10,6 +11,10 @@ class PublicationsController < ApplicationController
       format.html # index.html.erb
       format.xml  { render :xml => @publications }
     end
+  end
+  
+  def mypublications
+    @publications = current_user.publications.order('created_at desc')
   end
 
   # GET /publications/1
@@ -85,4 +90,10 @@ class PublicationsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  private
+  def my_publications
+    @mypublications = current_user.publications.order('created_at desc').limit(5)
+  end
+  
 end

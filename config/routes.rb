@@ -1,8 +1,16 @@
 Repositorio::Application.routes.draw do |map|
   resources :publications do
       resources :comments
+      
   end
+  
+  match "/mypublications" => "publications#mypublications", :as => :mypublications
+  
 
+  
+  #La EPIC line con que derrote a Enrique 
+  #map.get 'mypublications', :controller => 'publications', :action => 'mypublications'
+  
   devise_for :users
   
   root :to => "publications#index"

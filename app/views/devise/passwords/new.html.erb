@@ -1,4 +1,4 @@
-<h2>Forgot your password?</h2>
+<h2>Olvidaste tu password?</h2>
 
 <div id="theform">
 	<%= form_for(resource, :as => resource_name, :url => password_path(resource_name)) do |f| %>
@@ -7,8 +7,11 @@
 	  <p><%= f.label :email %>
 	  <%= f.text_field :email, :class => 'inputnormal' %></p>
 
-	  <p><%= f.submit "Send me reset password instructions", :class => 'submitfinal' %></p>
+	  <p><%= f.submit "Enviame las instrucciones para resetear mi password", :class => 'submitfinal' %></p>
 	<% end %>
 
-	<%= render :partial => "devise/shared/links" %>
 </div>
+
+<% content_for :help do %>
+	<%= render :partial => "devise/shared/links" %>
+<% end %>

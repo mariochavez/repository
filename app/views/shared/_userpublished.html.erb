@@ -1,9 +1,13 @@
-<div id="user-published">
-	<% if user_signed_in? %>
-    <h3><span>Mis publicaciones</span> <a title="Ver todas mis publicaciones" href="#">Ver todas</a></h3>
-    <ul>
-        <li><a title="Variables de autos" href="#">Variables de autos</a></li>
-        <li><a title="Bienvenidos al repositorio del proyecto" href="#">Bienvenidos al repositorio del proyecto</a></li>
-    </ul>
+<% if user_signed_in? %>
+	<% if current_user.publications.count >= 1 %>
+	<div id="user-published">
+    	<h3><span>Mis publicaciones</span> <%= link_to 'Ver todas', mypublications_path %></h3>
+    	<ul>
+		<% @mypublications.each do |mp| %>
+        	<li><a title="<%= mp.title %>" href="<%= publication_path mp %>"><%= mp.title %></a></li>
+		<% end %>
+    	</ul>
+	</div><!--end user-published-->
 	<% end %>
-</div><!--end user-published-->
+
+<% end %>

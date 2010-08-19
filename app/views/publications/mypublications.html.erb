@@ -1,0 +1,13 @@
+<h2>Mis publicaciones</h2>
+
+<% @publications.each do |publication| %>
+  <div class="mypublication">
+		<div class="mypublititle">
+			<h3><span><a title="<%= publication.title %>" href="<%=publication_path publication %>"><%= publication.title %></a></span> <%=publication.created_at.day%> <%=publication.created_at.strftime('%b').downcase!%></h3>
+		</div>
+		<div class="mypublioptions">
+			<h5><%= link_to 'Editar Publicación', edit_publication_path(publication) %> <%= link_to 'Eliminar publicación', publication, :confirm => '¿Deseas eliminar esta publicación?', :method => :delete %></h5>
+		</div>
+  </div>
+
+<% end %>
